@@ -7,6 +7,30 @@
     <link rel="stylesheet" href="Styles/style.css" />
   </head>
   <body>
-    <script src="script.js"></script>
+    <header>
+      <h1>HANGMAN</h1>
+    </header>
+    <main>
+      <section class="imageHangman">
+        <img src="" alt="hangman" id="hangman" />
+      </section>
+      <!--here insert letter input -->
+      <section class="inputletter">
+        <div id="run">
+          <form>
+            <input type="text" maxlength="1" pattern="[A-Za-z]{1}" />
+          </form>
+        </div>
+      </section>
+      <!--Score-->
+      <section class="score">
+        <p id="result">lorem</p>
+      </section>
+      <!--new game-->
+      <section class="newGame">
+        <button id="newGame">New Game</button>
+      </section>
+    </main>
+    <script type="module" src="Script/index.js"></script>
   </body>
 </html>
