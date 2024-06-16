@@ -12,11 +12,11 @@
         <h1>HANGMAN</h1>
       </header>
       <main>
-        <section class="imageHangman">
+        <section class="imageHang" id="imageHangman">
           <img src="images/potence.png" alt="hangman" id="hangman" />
         </section>
         <!--new game-->
-        <section class="newGame">
+        <section hidden class="newG" id="newGSection">
           <button id="newGame">New Game</button>
         </section>
 
@@ -26,7 +26,7 @@
 
         <section hidden id="game">
           <section id="guessword"></section>
-          <section class="inputletter">
+          <section hidden id="inputletter">
             <div class="inputform">
               <form>
                 <input
@@ -34,6 +34,7 @@
                   maxlength="1"
                   pattern="[A-Za-z]{1}"
                   size="1"
+                  id="text1"
                 />
                 <input type="submit" value="submit" id="run" />
               </form>
