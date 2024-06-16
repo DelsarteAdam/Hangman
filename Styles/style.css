@@ -1,1 +1,126 @@
-/*# sourceMappingURL=style.css.map */
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&display=swap");
+html {
+  background-color: #d7d0bd;
+  color: #364c86;
+  font-family: "Playwrite FR Moderne", cursive;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainbody {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(../images/v602-nunoon-05-rippednotes.jpg);
+  background-size: contain;
+  box-shadow: 5px 5px 5px #61a363;
+  padding: 5vw;
+  margin-top: 5vh;
+  height: 100dvh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+header h1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #b3514e;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 3rem;
+  width: 100%;
+  margin: 2vh;
+  padding: 1vh;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lettershow {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2em;
+  background-color: #d7d0bd;
+  width: 50px;
+  height: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 5px solid #61a363;
+}
+
+button,
+input[type=submit] {
+  font-family: "Playwrite FR Moderne", cursive;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 12px 24px;
+  border: 0;
+  color: #ffffff;
+  background: #f8cd5a;
+  line-height: 1.15;
+  font-size: 16px;
+}
+button:hover,
+input[type=submit]:hover {
+  transition: all 0.1s ease;
+  box-shadow: 0 0 0 0 #fff, 0 0 0 3px #364c86;
+}
+
+input[type=text] {
+  font-family: "Playwrite FR Moderne", cursive;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 12px 24px;
+  border: 0;
+  color: #364c86;
+  background: #ffffff;
+  line-height: 1.15;
+  font-size: 16px;
+  border: 1px solid #364c86;
+}
+
+#hangman {
+  width: 512px;
+}
+
+section {
+  margin-bottom: 2vh;
+}
+
+.score {
+  color: #b3514e;
+}
+
+#guessword {
+  display: flex;
+  flex-direction: row;
+}
+#guessword p {
+  margin-right: 5px;
+}
+
+#game {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}/*# sourceMappingURL=style.css.map */

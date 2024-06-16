@@ -7,34 +7,47 @@
     <link rel="stylesheet" href="Styles/style.css" />
   </head>
   <body>
-    <header>
-      <h1>HANGMAN</h1>
-    </header>
-    <main>
-      <section class="imageHangman">
-        <img src="" alt="hangman" id="hangman" />
-      </section>
-      <!--here insert letter input -->
-      <section class="inputletter">
-        <div class="inputform">
-          <form>
-            <input type="text" maxlength="1" pattern="[A-Za-z]{1}" />
-            <input type="submit" value="submit" id="run" />
-          </form>
-        </div>
-      </section>
-      <!--show letter-->
-      <p>number of letter</p>
-      <p id="letterSelect">here show box with correct letter</p>
-      <!--Score-->
-      <section class="score">
-        <p id="result">lorem</p>
-      </section>
-      <!--new game-->
-      <section class="newGame">
-        <button id="newGame">New Game</button>
-      </section>
-    </main>
+    <section class="mainbody">
+      <header>
+        <h1>HANGMAN</h1>
+      </header>
+      <main>
+        <section class="imageHangman">
+          <img src="images/potence.png" alt="hangman" id="hangman" />
+        </section>
+        <!--new game-->
+        <section class="newGame">
+          <button id="newGame">New Game</button>
+        </section>
+
+        <!--test letter
+        <p  class="lettershow">a</p> -->
+        <!--here insert letter input -->
+
+        <section hidden id="game">
+          <section id="guessword"></section>
+          <section class="inputletter">
+            <div class="inputform">
+              <form>
+                <input
+                  type="text"
+                  maxlength="1"
+                  pattern="[A-Za-z]{1}"
+                  size="1"
+                />
+                <input type="submit" value="submit" id="run" />
+              </form>
+            </div>
+          </section>
+        </section>
+
+        <!--Score-->
+        <section class="score">
+          <p id="result">WIN: <span id="wincount">0</span></p>
+          <p id="result">LOSE: <span id="losecount">0</span></p>
+        </section>
+      </main>
+    </section>
     <script type="module" src="Script/index.js"></script>
   </body>
 </html>
