@@ -16,7 +16,15 @@
           <img src="images/potence.png" alt="hangman" id="hangman" />
         </section>
         <!--new game-->
-        <section hidden class="newG" id="newGSection">
+        <section id="win">
+          <h2 class="winLose">YOU WIN !</h2>
+          <p>play again ?</p>
+        </section>
+        <section id="lose">
+          <h2 class="winLose">YOU LOSE !</h2>
+          <p>play again ?</p>
+        </section>
+        <section class="newG" id="newGSection">
           <button id="newGame">New Game</button>
         </section>
 
@@ -24,20 +32,18 @@
         <p  class="lettershow">a</p> -->
         <!--here insert letter input -->
 
-        <section hidden id="game">
+        <section id="game">
           <section id="guessword"></section>
-          <section hidden id="inputletter">
+          <section id="inputletter">
             <div class="inputform">
-              <form>
-                <input
-                  type="text"
-                  maxlength="1"
-                  pattern="[A-Za-z]{1}"
-                  size="1"
-                  id="text1"
-                />
-                <input type="submit" value="submit" id="run" />
-              </form>
+              <input
+                type="text"
+                maxlength="1"
+                pattern="[A-Za-z]{1}"
+                size="1"
+                id="text1"
+              />
+              <input type="submit" value="submit" id="run" />
             </div>
           </section>
         </section>
