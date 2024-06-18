@@ -148,3 +148,11 @@ section {
     text-align: center;
   }
 }
+
+#help {
+  @include flex;
+  flex-direction: row;
+  p {
+    margin-right: 10px;
+  }
+}

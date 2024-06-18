@@ -20,17 +20,37 @@ document.getElementById("inputletter").hidden = true;
 document.getElementById("newGSection").hidden = false;
 document.getElementById("win").hidden = true;
 document.getElementById("lose").hidden = true;
+
 let arrWord = [];
 let letterSubmit = "";
 //letter memory :
 
 let letterMemory = [];
+let helpbtn = false;
+let helpbtn2 = false;
+let arrHelp = ["e", "a", "r", "i", "o"];
 
 function createArrLetterMemory() {
   for (let i = 0; i < arrWord.length; i++) {
     letterMemory.push("");
   }
   console.log(letterMemory);
+}
+
+//add letter help
+function letterHelp() {
+  for (let a = 0; a < arrHelp.length; a++) {
+    for (let i = 0; i < arrWord.length; i++) {
+      if (arrHelp[a] == arrWord[i]) {
+        var b = "letterPose" + i;
+        console.log(b);
+        document.getElementById(b).innerHTML = arrHelp[a];
+        letterMemory[i] = arrHelp[a];
+        console.log(letterMemory);
+      }
+    }
+  }
+  winCondition();
 }
 
 //win point
@@ -131,6 +151,7 @@ document.getElementById("newGame").addEventListener("click", function () {
   document.getElementById("lose").hidden = true;
 
   //select random word from list
+
   letterMemory = [];
 
   let numberWordSelect = Math.floor(Math.random() * 2999);
@@ -152,20 +173,37 @@ document.getElementById("newGame").addEventListener("click", function () {
   }
 
   wordBaseHtml();
+  helpbtn2 = false;
+  helpbtn = true;
 });
 
 //input game
 
 document.getElementById("run").onclick = function action() {
   letterSubmit = document.getElementById("text1").value;
-  console.log(letterSubmit);
-  letterCheck();
-  console.log(losePoint);
-  imageChange();
-  loseGame();
-  winCondition();
+  if (letterSubmit == "") {
+    alert("you must write a letter");
+  } else {
+    console.log(letterSubmit);
+    letterCheck();
+    console.log(losePoint);
+    imageChange();
+    loseGame();
+    winCondition();
 
-  console.log(lose);
-  console.log(win);
-  document.getElementById("text1").value = "";
+    console.log(lose);
+    console.log(win);
+    document.getElementById("text1").value = "";
+  }
 };
+
+document.getElementById("run2").addEventListener("click", function () {
+  if (helpbtn === false) {
+    alert("play new game first!");
+  } else if (helpbtn2 === true) {
+    alert("Only one time per game!");
+  } else {
+    helpbtn2 = true;
+    letterHelp();
+  }
+});

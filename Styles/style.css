@@ -147,4 +147,14 @@ section {
   align-items: center;
   flex-direction: column;
   text-align: center;
+}
+
+#help {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-direction: row;
+}
+#help p {
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */
