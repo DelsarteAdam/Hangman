@@ -29,6 +29,7 @@ let letterMemory = [];
 let helpbtn = false;
 let helpbtn2 = false;
 let arrHelp = ["e", "a", "r", "i", "o"];
+let letterChose = [];
 
 function createArrLetterMemory() {
   for (let i = 0; i < arrWord.length; i++) {
@@ -153,6 +154,7 @@ document.getElementById("newGame").addEventListener("click", function () {
   //select random word from list
 
   letterMemory = [];
+  document.getElementById("letterChose").innerHTML = "letter chosen:";
 
   let numberWordSelect = Math.floor(Math.random() * 2999);
   let worldSelect = words[numberWordSelect];
@@ -184,6 +186,8 @@ document.getElementById("run").onclick = function action() {
   if (letterSubmit == "") {
     alert("you must write a letter");
   } else {
+    letterChose.push(letterSubmit);
+    document.getElementById("letterChose").innerHTML += `${letterSubmit}-`;
     console.log(letterSubmit);
     letterCheck();
     console.log(losePoint);
@@ -204,6 +208,7 @@ document.getElementById("run2").addEventListener("click", function () {
     alert("Only one time per game!");
   } else {
     helpbtn2 = true;
+    document.getElementById("letterChose").innerHTML += "e-a-r-i-o-";
     letterHelp();
   }
 });
